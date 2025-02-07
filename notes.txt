@@ -58,3 +58,5 @@ spice park platform
 its called in memory processing
 
 Elasticnet to be used for adding the algorithms 
+
+(venv) PS C:\Users\Sarthak\OneDrive\Documents\Desktop\VAC-MLOPS> mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./artifacts -host 127.0.0.1 -p 5000
