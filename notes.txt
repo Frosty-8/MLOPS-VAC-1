@@ -71,3 +71,13 @@ MLFLOW :
  
 
 Django : a framework based on MVT (Model View Template) design  platform 
+
+
+from django.contrib import admin
+from django.urls import path
+from firstApp import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',views.index)  this tells us its not the good coding cause it creates Trojan Horse issue which means vulnerability
+] 
