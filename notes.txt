@@ -140,3 +140,54 @@ COMMIT;
 ========================================================================================================================================================================
 
 DATE : 08/02/2025
+
+
+Docker is an engine which runs the container 
+It is a container management service , keywords of Docker are developed , ship and run everywhere .
+idea of Docker ship them into containers
+
+docker build - containerize the images
+docker pull - used to run your application
+docker run - to run an image
+Registry - where it contains pre images 
+
+Docker images - an image is a combination of file system and parameters , everything is based in images 
+              "docker run hello-world"
+to use the CentOS image available in docker hub to run CentOS on our ubuntu machine
+        sudo docker run -it centos /bin/bash
+
+to list all the images in docker 
+        docker images
+
+TAG - used to logically tag image
+Image ID - used to uniquely identify the image
+Created - no . of days since the image was created
+virtual size - size of the image
+
+Container - its a container of images 
+
+Docker volumes are widely used and useful tool for ensuring data persistence while working in containers
+
+docker run -v /home/mount/data : /var/lib/mysql/data - >  to call the container
+
+Docekr Networking 
+it allows you to create a network of docker containers managed by a master node called the manager 
+containers inside the docker network can talk each other by sharing packets
+Bridge : if you build a container without specifying the kind of driver 
+types of docker networking :-> none
+                               host
+commands :-> sudo docker network
+             sudo docker network ls
+
+ECR -> elastic container registry
+
+docker security -> containers are immutable by nature , any modifications to a running container instance must first be made to the container image before beinng deployed 
+1. keep host system and docker software updated
+2. use official , verified docker images
+3. run containers as non-root users
+4. limit no.of open ports on a container - docker run -p 80:80 myimage
+5. use encrypted environment variables and docker secrets
+6. monitor the host and container logs - docker logs <container_name>
+7. use network segmentation and firewalls : docekr networking , third - party network plugins , host & container - based firewalls
+8. enable security features
+9. regularly access and validate the security posture 
