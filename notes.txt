@@ -187,6 +187,9 @@ docker security -> containers are immutable by nature , any modifications to a r
 3. run containers as non-root users
 4. limit no.of open ports on a container - docker run -p 80:80 myimage
 5. use encrypted environment variables and docker secrets
+
+
+sbom
 6. monitor the host and container logs - docker logs <container_name>
 7. use network segmentation and firewalls : docekr networking , third - party network plugins , host & container - based firewalls
 8. enable security features
